@@ -37,7 +37,7 @@ This repository contains all the necessary code, documentation, and resources to
 - Jane Smith: Data analysis and documentation.
 
 ## Links and Resources
-- **GitHub Repository**: [Link to this repository]
+- **GitHub Repository**: (https://github.com/ced427/Connected-Greenhouse.git)
 - **Project Video**: [Link to project overview video]
 
 ## Glossary and Bibliography
