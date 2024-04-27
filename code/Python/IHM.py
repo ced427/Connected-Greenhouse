@@ -2,7 +2,7 @@ import serial
 import tkinter as tk
 import time
 
-#ser = serial.Serial('/dev/ttyUSB0', 115200)
+ser = serial.Serial('/dev/ttyUSB0', 115200)
 
 # Création de la fenêtre principale
 root = tk.Tk()
@@ -34,10 +34,10 @@ def move_x(direction):
     global speed
     if direction == "forward":
         x_position += incr*speed
-        #ser.write(b'X')
+        ser.write(b'X')
     elif direction == "backward":
         x_position -= incr*speed
-        #ser.write(b'x')
+        ser.write(b'x')
     x_position = round(x_position,1)
     str_x_position.set(str(round(x_position,1)))
     print(f"X={x_position}")
@@ -49,10 +49,10 @@ def move_y(direction):
     global incr
     if direction == "forward":
         y_position += incr*speed
-        #ser.write(b'Y')
+        ser.write(b'Y')
     elif direction == "backward":
         y_position -= incr*speed
-        #ser.write(b'y')
+        ser.write(b'y')
     y_position = round(y_position,1)
     str_y_position.set(str(round(y_position,1)))
     print(f"Y={y_position}")
@@ -64,11 +64,11 @@ def move_z(direction):
     global incr
     if direction == "up":
         z_position += incr*speed
-        #ser.write(b'Z')
+        ser.write(b'Z')
         print(f"Z={z_position}")
     elif direction == "down":
         z_position -= incr*speed
-        #ser.write(b'z')
+        ser.write(b'z')
         print(f"Z={z_position}")
     z_position = round(z_position,1)
     str_z_position.set(str(round(z_position,1)))
