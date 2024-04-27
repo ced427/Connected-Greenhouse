@@ -290,7 +290,7 @@ if (Serial.available() > 0) {
 }
 
 // Function to move both stepper motors of the X-axis for a given distance and direction
-void moveX(float distance, bool forward, int speed) {
+void moveX(int stepPin1, int stepPin2, float distance, bool forward, int speed) {
   // Calculate the number of steps required based on the distance
   float stepsPerMM = 2000; // 200 steps per revolution, and 10 revolutions per mm (0.1mm per revolution)
   int steps = distance * stepsPerMM;
@@ -312,7 +312,7 @@ void moveX(float distance, bool forward, int speed) {
 }
 
 // Function to move the stepper motor of the Y-axis for a given distance and direction
-void moveY(float distance, bool forward, int speed) {
+void moveY(int stepPin, float distance, bool forward, int speed) {
   // Calculate the number of steps required based on the distance
   float stepsPerMM = 2000; // 200 steps per revolution, and 10 revolutions per mm (0.1mm per revolution)
   int steps = distance * stepsPerMM;
@@ -331,7 +331,7 @@ void moveY(float distance, bool forward, int speed) {
 }
 
 // Function to move the stepper motor of the Z-axis for a given distance and direction
-void moveZ(float distance, bool forward, int speed) {
+void moveZ(int stepPin, float distance, bool forward, int speed) {
   // Calculate the number of steps required based on the distance
   float stepsPerMM = 2000; // 200 steps per revolution, and 10 revolutions per mm (0.1mm per revolution)
   int steps = distance * stepsPerMM;
